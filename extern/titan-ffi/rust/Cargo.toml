@@ -1,0 +1,24 @@
+[package]
+name = "ticrypto"
+version = "0.1.0"
+edition = "2021"
+resolver = "2"
+publish = false
+
+[lib]
+crate-type = ["rlib", "staticlib"]
+
+
+[dependencies]
+bls-signatures = { version = "0.15.0", default-features = false, features = ["blst"] }
+blstrs = "0.7"
+group = "0.13"
+rand = "0.8"
+rand_chacha = "0.3.1"
+rayon = "1.2.1"
+libc = "0.2.58"
+safer-ffi = { version = "0.0.7", features = ["proc_macros"]}
+
+[features]
+c-headers = ["safer-ffi/headers"]
+blst-portable = ["bls-signatures/blst-portable", "blstrs/portable"]

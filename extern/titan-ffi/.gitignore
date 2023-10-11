@@ -1,0 +1,4 @@
+/rust/target/
+*.a
+ticrypto.h
+ticrypto.pc

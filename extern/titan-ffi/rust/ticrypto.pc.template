@@ -1,0 +1,4 @@
+Name: ticrypto
+Version: @VERSION@
+Description: C bindings for Filecoin Proofs
+Libs: @PRIVATE_LIBS@
